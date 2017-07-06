@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C85EBCF4AA33852BDA0D3BA /* Pods_TransferInformation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC6175565F813CBB0BE187A /* Pods_TransferInformation.framework */; };
 		EC1EE0D31F0E1E2900D47C9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1EE0D21F0E1E2900D47C9F /* AppDelegate.swift */; };
 		EC1EE0D51F0E1E2900D47C9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1EE0D41F0E1E2900D47C9F /* ViewController.swift */; };
 		EC1EE0D81F0E1E2900D47C9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1EE0D61F0E1E2900D47C9F /* Main.storyboard */; };
@@ -14,9 +15,15 @@
 		EC1EE0DD1F0E1E2900D47C9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1EE0DB1F0E1E2900D47C9F /* LaunchScreen.storyboard */; };
 		EC1EE0E71F0E240C00D47C9F /* secondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1EE0E61F0E240C00D47C9F /* secondViewController.swift */; };
 		EC1EE0E91F0E2A1F00D47C9F /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1EE0E81F0E2A1F00D47C9F /* TransitionManager.swift */; };
+		EC7A88911F0E5D25009514AB /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7A888F1F0E5D25009514AB /* Realm.framework */; };
+		EC7A88921F0E5D25009514AB /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7A88901F0E5D25009514AB /* RealmSwift.framework */; };
+		EC7A88941F0E5D44009514AB /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A88931F0E5D44009514AB /* DataBase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8BC6175565F813CBB0BE187A /* Pods_TransferInformation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransferInformation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9DE02422D27D02B7AF5DAC0 /* Pods-TransferInformation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransferInformation.release.xcconfig"; path = "Pods/Target Support Files/Pods-TransferInformation/Pods-TransferInformation.release.xcconfig"; sourceTree = "<group>"; };
+		C7DB6DF4ABA0BE4F5E36E942 /* Pods-TransferInformation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransferInformation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TransferInformation/Pods-TransferInformation.debug.xcconfig"; sourceTree = "<group>"; };
 		EC1EE0CF1F0E1E2900D47C9F /* TransferInformation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransferInformation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC1EE0D21F0E1E2900D47C9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC1EE0D41F0E1E2900D47C9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +33,9 @@
 		EC1EE0DE1F0E1E2900D47C9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC1EE0E61F0E240C00D47C9F /* secondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = secondViewController.swift; sourceTree = "<group>"; };
 		EC1EE0E81F0E2A1F00D47C9F /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
+		EC7A888F1F0E5D25009514AB /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		EC7A88901F0E5D25009514AB /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		EC7A88931F0E5D44009514AB /* DataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +43,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC7A88911F0E5D25009514AB /* Realm.framework in Frameworks */,
+				8C85EBCF4AA33852BDA0D3BA /* Pods_TransferInformation.framework in Frameworks */,
+				EC7A88921F0E5D25009514AB /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3EE6F96B1CD623CE994EC1A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C7DB6DF4ABA0BE4F5E36E942 /* Pods-TransferInformation.debug.xcconfig */,
+				A9DE02422D27D02B7AF5DAC0 /* Pods-TransferInformation.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		723C9AE0332191E0C52D2B83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BC6175565F813CBB0BE187A /* Pods_TransferInformation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EC1EE0C61F0E1E2900D47C9F = {
 			isa = PBXGroup;
 			children = (
 				EC1EE0D11F0E1E2900D47C9F /* TransferInformation */,
 				EC1EE0D01F0E1E2900D47C9F /* Products */,
+				3EE6F96B1CD623CE994EC1A7 /* Pods */,
+				723C9AE0332191E0C52D2B83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,10 +94,13 @@
 				EC1EE0E61F0E240C00D47C9F /* secondViewController.swift */,
 				EC1EE0E81F0E2A1F00D47C9F /* TransitionManager.swift */,
 				EC1EE0D41F0E1E2900D47C9F /* ViewController.swift */,
+				EC7A88931F0E5D44009514AB /* DataBase.swift */,
 				EC1EE0D61F0E1E2900D47C9F /* Main.storyboard */,
 				EC1EE0D91F0E1E2900D47C9F /* Assets.xcassets */,
 				EC1EE0DB1F0E1E2900D47C9F /* LaunchScreen.storyboard */,
 				EC1EE0DE1F0E1E2900D47C9F /* Info.plist */,
+				EC7A888F1F0E5D25009514AB /* Realm.framework */,
+				EC7A88901F0E5D25009514AB /* RealmSwift.framework */,
 			);
 			path = TransferInformation;
 			sourceTree = "<group>";
@@ -77,9 +112,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC1EE0E11F0E1E2900D47C9F /* Build configuration list for PBXNativeTarget "TransferInformation" */;
 			buildPhases = (
+				E4F1F50E4089052397DC9254 /* [CP] Check Pods Manifest.lock */,
 				EC1EE0CB1F0E1E2900D47C9F /* Sources */,
 				EC1EE0CC1F0E1E2900D47C9F /* Frameworks */,
 				EC1EE0CD1F0E1E2900D47C9F /* Resources */,
+				D3C844CC0A955201248500A4 /* [CP] Embed Pods Frameworks */,
+				8100872EBE84BC20EA20D75A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,11 +176,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8100872EBE84BC20EA20D75A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TransferInformation/Pods-TransferInformation-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3C844CC0A955201248500A4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TransferInformation/Pods-TransferInformation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4F1F50E4089052397DC9254 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EC1EE0CB1F0E1E2900D47C9F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC7A88941F0E5D44009514AB /* DataBase.swift in Sources */,
 				EC1EE0E91F0E2A1F00D47C9F /* TransitionManager.swift in Sources */,
 				EC1EE0D51F0E1E2900D47C9F /* ViewController.swift in Sources */,
 				EC1EE0E71F0E240C00D47C9F /* secondViewController.swift in Sources */,
@@ -267,9 +354,14 @@
 		};
 		EC1EE0E21F0E1E2900D47C9F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7DB6DF4ABA0BE4F5E36E942 /* Pods-TransferInformation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 43GDRMYERL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TransferInformation",
+				);
 				INFOPLIST_FILE = TransferInformation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DonRiver.TransferInformation;
@@ -280,9 +372,14 @@
 		};
 		EC1EE0E31F0E1E2900D47C9F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9DE02422D27D02B7AF5DAC0 /* Pods-TransferInformation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 43GDRMYERL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TransferInformation",
+				);
 				INFOPLIST_FILE = TransferInformation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DonRiver.TransferInformation;
@@ -310,6 +407,7 @@
 				EC1EE0E31F0E1E2900D47C9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
