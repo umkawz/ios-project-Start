@@ -17,7 +17,7 @@ class secondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        textView.text = textOfFirstLayout
+        //textView.text = textOfFirstLayout
         // Do any additional setup after loading the view.
     }
 

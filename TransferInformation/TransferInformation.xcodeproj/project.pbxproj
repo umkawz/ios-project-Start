@@ -17,7 +17,10 @@
 		EC1EE0E91F0E2A1F00D47C9F /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1EE0E81F0E2A1F00D47C9F /* TransitionManager.swift */; };
 		EC7A88911F0E5D25009514AB /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7A888F1F0E5D25009514AB /* Realm.framework */; };
 		EC7A88921F0E5D25009514AB /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7A88901F0E5D25009514AB /* RealmSwift.framework */; };
-		EC7A88941F0E5D44009514AB /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A88931F0E5D44009514AB /* DataBase.swift */; };
+		EC7A889A1F0E71B8009514AB /* DBEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A88991F0E71B8009514AB /* DBEvent.swift */; };
+		EC7A889D1F0E71D1009514AB /* DBTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A889C1F0E71D1009514AB /* DBTree.swift */; };
+		EC7A889F1F0E7520009514AB /* TestDog.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A889E1F0E7520009514AB /* TestDog.swift */; };
+		EC7A88A11F0E7792009514AB /* DOG.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A88A01F0E7792009514AB /* DOG.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +38,11 @@
 		EC1EE0E81F0E2A1F00D47C9F /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		EC7A888F1F0E5D25009514AB /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		EC7A88901F0E5D25009514AB /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
-		EC7A88931F0E5D44009514AB /* DataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
+		EC7A88971F0E6EDC009514AB /* TransferInformation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TransferInformation.entitlements; sourceTree = "<group>"; };
+		EC7A88991F0E71B8009514AB /* DBEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBEvent.swift; sourceTree = "<group>"; };
+		EC7A889C1F0E71D1009514AB /* DBTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBTree.swift; sourceTree = "<group>"; };
+		EC7A889E1F0E7520009514AB /* TestDog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDog.swift; sourceTree = "<group>"; };
+		EC7A88A01F0E7792009514AB /* DOG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOG.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,19 +97,31 @@
 		EC1EE0D11F0E1E2900D47C9F /* TransferInformation */ = {
 			isa = PBXGroup;
 			children = (
+				EC7A88971F0E6EDC009514AB /* TransferInformation.entitlements */,
 				EC1EE0D21F0E1E2900D47C9F /* AppDelegate.swift */,
 				EC1EE0E61F0E240C00D47C9F /* secondViewController.swift */,
 				EC1EE0E81F0E2A1F00D47C9F /* TransitionManager.swift */,
 				EC1EE0D41F0E1E2900D47C9F /* ViewController.swift */,
-				EC7A88931F0E5D44009514AB /* DataBase.swift */,
 				EC1EE0D61F0E1E2900D47C9F /* Main.storyboard */,
 				EC1EE0D91F0E1E2900D47C9F /* Assets.xcassets */,
 				EC1EE0DB1F0E1E2900D47C9F /* LaunchScreen.storyboard */,
+				EC7A88981F0E7187009514AB /* Model */,
 				EC1EE0DE1F0E1E2900D47C9F /* Info.plist */,
 				EC7A888F1F0E5D25009514AB /* Realm.framework */,
 				EC7A88901F0E5D25009514AB /* RealmSwift.framework */,
 			);
 			path = TransferInformation;
+			sourceTree = "<group>";
+		};
+		EC7A88981F0E7187009514AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC7A88991F0E71B8009514AB /* DBEvent.swift */,
+				EC7A889E1F0E7520009514AB /* TestDog.swift */,
+				EC7A889C1F0E71D1009514AB /* DBTree.swift */,
+				EC7A88A01F0E7792009514AB /* DOG.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +161,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 43GDRMYERL;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -229,10 +253,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC7A88941F0E5D44009514AB /* DataBase.swift in Sources */,
+				EC7A889F1F0E7520009514AB /* TestDog.swift in Sources */,
+				EC7A889D1F0E71D1009514AB /* DBTree.swift in Sources */,
 				EC1EE0E91F0E2A1F00D47C9F /* TransitionManager.swift in Sources */,
+				EC7A889A1F0E71B8009514AB /* DBEvent.swift in Sources */,
 				EC1EE0D51F0E1E2900D47C9F /* ViewController.swift in Sources */,
 				EC1EE0E71F0E240C00D47C9F /* secondViewController.swift in Sources */,
+				EC7A88A11F0E7792009514AB /* DOG.swift in Sources */,
 				EC1EE0D31F0E1E2900D47C9F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +384,7 @@
 			baseConfigurationReference = C7DB6DF4ABA0BE4F5E36E942 /* Pods-TransferInformation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TransferInformation/TransferInformation.entitlements;
 				DEVELOPMENT_TEAM = 43GDRMYERL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -375,6 +403,7 @@
 			baseConfigurationReference = A9DE02422D27D02B7AF5DAC0 /* Pods-TransferInformation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TransferInformation/TransferInformation.entitlements;
 				DEVELOPMENT_TEAM = 43GDRMYERL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
