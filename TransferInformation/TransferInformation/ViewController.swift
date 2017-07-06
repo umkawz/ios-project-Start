@@ -11,7 +11,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let transitionManager = TransitionManager()
+    //let transitionManager = TransitionManager()
     
     
     @IBOutlet weak var editText: UITextField!
@@ -31,23 +31,12 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // 1
-        let toViewController = segue.destination as UIViewController
-        
-        // 2
-        toViewController.transitioningDelegate = self.transitionManager
+//        let toViewController = segue.destination as UIViewController
+//        toViewController.transitioningDelegate = self.transitionManager
 
-        
         let secondVC: secondViewController = segue.destination as! secondViewController
         secondVC.textOfFirstLayout = "Text of first layout edit text - " + editText.text!
         //secondVC.transitioningDelegate = self.transitionManager
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-////        let destVc: secondViewController = segue.destination as! secondViewController
-////        destVc.textOfView = editText.text!
-//    }
-
-
 }
 

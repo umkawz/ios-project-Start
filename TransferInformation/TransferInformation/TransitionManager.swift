@@ -30,11 +30,11 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
         container.addSubview(toView)
         container.addSubview(fromView)
         
-        let duration = self.transitionDuration(transitionContext)
-        UIView.animateWithDuration(0.8, delay: 0.0, options: nil, animations: {
+        let duration = self.transitionDuration(using: transitionContext)
+        UIView.animate(withDuration: 0.8, delay: 0.0, options: [.autoreverse, .repeat], animations: {
             
             fromView.transform = offScreenLeft
-            toView.transform = CGAffineTransformIdentity
+            toView.transform = .identity
             
         }, completion: { finished in
             
@@ -43,7 +43,7 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
         })
     }
     
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.5
     }
     
