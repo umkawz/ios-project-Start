@@ -13,4 +13,14 @@ class DBEvent: Object {
     dynamic var idCard = 0
     dynamic var idLayout = 0
     dynamic var Description = ""
+    //dynamic var data: DBUserData?
 }
+
+//class DBUserData: Object{
+//    dynamic var idCard = 0
+//    dynamic var UserDescription = ""
+//}
+//
+//class DBTree: Object{
+//    dynamic var idCard = 0
+//}

@@ -15,12 +15,11 @@
 		EC1EE0DD1F0E1E2900D47C9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1EE0DB1F0E1E2900D47C9F /* LaunchScreen.storyboard */; };
 		EC1EE0E71F0E240C00D47C9F /* secondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1EE0E61F0E240C00D47C9F /* secondViewController.swift */; };
 		EC1EE0E91F0E2A1F00D47C9F /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1EE0E81F0E2A1F00D47C9F /* TransitionManager.swift */; };
+		EC27CC4C1F0FB738006C75EA /* DBUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC27CC4B1F0FB738006C75EA /* DBUserData.swift */; };
+		EC27CC4E1F0FB773006C75EA /* DBTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC27CC4D1F0FB773006C75EA /* DBTree.swift */; };
 		EC7A88911F0E5D25009514AB /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7A888F1F0E5D25009514AB /* Realm.framework */; };
 		EC7A88921F0E5D25009514AB /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7A88901F0E5D25009514AB /* RealmSwift.framework */; };
 		EC7A889A1F0E71B8009514AB /* DBEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A88991F0E71B8009514AB /* DBEvent.swift */; };
-		EC7A889D1F0E71D1009514AB /* DBTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A889C1F0E71D1009514AB /* DBTree.swift */; };
-		EC7A889F1F0E7520009514AB /* TestDog.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A889E1F0E7520009514AB /* TestDog.swift */; };
-		EC7A88A11F0E7792009514AB /* DOG.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A88A01F0E7792009514AB /* DOG.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,13 +35,12 @@
 		EC1EE0DE1F0E1E2900D47C9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC1EE0E61F0E240C00D47C9F /* secondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = secondViewController.swift; sourceTree = "<group>"; };
 		EC1EE0E81F0E2A1F00D47C9F /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
+		EC27CC4B1F0FB738006C75EA /* DBUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBUserData.swift; sourceTree = "<group>"; };
+		EC27CC4D1F0FB773006C75EA /* DBTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBTree.swift; sourceTree = "<group>"; };
 		EC7A888F1F0E5D25009514AB /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		EC7A88901F0E5D25009514AB /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		EC7A88971F0E6EDC009514AB /* TransferInformation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TransferInformation.entitlements; sourceTree = "<group>"; };
 		EC7A88991F0E71B8009514AB /* DBEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBEvent.swift; sourceTree = "<group>"; };
-		EC7A889C1F0E71D1009514AB /* DBTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBTree.swift; sourceTree = "<group>"; };
-		EC7A889E1F0E7520009514AB /* TestDog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDog.swift; sourceTree = "<group>"; };
-		EC7A88A01F0E7792009514AB /* DOG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOG.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,9 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				EC7A88991F0E71B8009514AB /* DBEvent.swift */,
-				EC7A889E1F0E7520009514AB /* TestDog.swift */,
-				EC7A889C1F0E71D1009514AB /* DBTree.swift */,
-				EC7A88A01F0E7792009514AB /* DOG.swift */,
+				EC27CC4D1F0FB773006C75EA /* DBTree.swift */,
+				EC27CC4B1F0FB738006C75EA /* DBUserData.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -253,13 +250,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC7A889F1F0E7520009514AB /* TestDog.swift in Sources */,
-				EC7A889D1F0E71D1009514AB /* DBTree.swift in Sources */,
+				EC27CC4C1F0FB738006C75EA /* DBUserData.swift in Sources */,
+				EC27CC4E1F0FB773006C75EA /* DBTree.swift in Sources */,
 				EC1EE0E91F0E2A1F00D47C9F /* TransitionManager.swift in Sources */,
 				EC7A889A1F0E71B8009514AB /* DBEvent.swift in Sources */,
 				EC1EE0D51F0E1E2900D47C9F /* ViewController.swift in Sources */,
 				EC1EE0E71F0E240C00D47C9F /* secondViewController.swift in Sources */,
-				EC7A88A11F0E7792009514AB /* DOG.swift in Sources */,
 				EC1EE0D31F0E1E2900D47C9F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

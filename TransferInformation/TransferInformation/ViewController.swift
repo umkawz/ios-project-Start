@@ -12,20 +12,52 @@ import RealmSwift
 
 class ViewController: UIViewController {
     var idQuest: Int = 1
+    let maxLayout = 4
     @IBOutlet weak var textQuestion: UILabel!
     
-    //let transitionManager = TransitionManager()
-    
-    
+    @IBOutlet weak var segmentData: UISegmentedControl!
     @IBOutlet weak var dogFilter: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        // Do any additional setup after loading the view, typically from a nib.
-        //CreateDB()
-        showDB()
+        firstTime()
+        showDB(id: idQuest) // Start id
+        moveLableText()
     }
     
+    func moveLableText(){
+        UIView.animate(withDuration: 2.0, delay: 1.0, options: .curveEaseOut, animations: {
+            var moveText = self.textQuestion.frame
+            moveText.origin.x -= 10
+            moveText.origin.y += 10
+            
+            self.textQuestion.frame = moveText
+        }, completion: { finished in
+            //print("moveEnd!")
+        })
+        UIView.animate(withDuration: 2.0, delay: 3.0, options: .curveEaseOut, animations: {
+            var moveText = self.textQuestion.frame
+            moveText.origin.x += 10
+            moveText.origin.y -= 10
+            
+            self.textQuestion.frame = moveText
+        }, completion: { finished in
+            //print("moveEnd2!")
+        })
+
+        
+    }
+    
+    func firstTime(){
+        let preferences = UserDefaults.standard
+        let currentLevelKey = "currentLevel"
+        if preferences.object(forKey: currentLevelKey) == nil {
+            let currentLevel = 0
+            preferences.set(currentLevel, forKey: currentLevelKey)
+            let didSave = preferences.synchronize()
+            CreateDB()
+        }
+    }
     
 
     override func didReceiveMemoryWarning() {
@@ -60,19 +92,57 @@ class ViewController: UIViewController {
     func CreateDB(){
         AddItemsDB(id: 1,layout: 1,desc: "Вы резидент?")
         AddItemsDB(id: 2,layout: 1,desc: "Был ли вычет ранее?")
+        AddItemsDB(id: 3,layout: 1,desc: "Вам не положен вычет")
     }
     
-    func showDB(){
+    func showDB(id: Int){
         let realm = try! Realm()
-        let requestsFromRealm = realm.objects(DBEvent.self)
-        let array = Array(requestsFromRealm)
-        textQuestion.text = array[1].Description
-        //textQuestion.text = requestsFromRealm.
-        //textQuestion.text =
+        try! realm.write{
+            let requestsFromRealm = realm.objects(DBEvent.self)//.filter("id == 0") пока костыль
+            //print(requestsFromRealm)
+            let array = Array(requestsFromRealm)
+            textQuestion.text = array[idQuest - 1].Description
+            //realm.delete(requestsFromRealm)
+        }
+        //print(requestsFromRealm)
+    }
+    
+    @IBAction func swipeUpdate(_ sender: UISwipeGestureRecognizer) {
+        //animateUpdate()
+        if(idQuest == 1){
+            if(segmentData.selectedSegmentIndex == 0){
+                idQuest += 1
+            }
+            else{
+                idQuest = idQuest + 2
+            }
+        }
+        print(idQuest)
+        if (idQuest<maxLayout){
+            showDB(id: idQuest)
+        }
+        moveLableText()
+    }
+    
+    func animateUpdate(){
+        UIView.animate(withDuration: 2.0, delay: 0.0, options: .curveEaseOut, animations: {
+            var moveText = self.view.frame
+            moveText.origin.x -= 550
+            //moveText.origin.y -= 20
+            
+            self.view.frame = moveText
+        }, completion: { finished in
+            
+            self.view.frame.origin.x += 550
+        })
+    }
+    
+    @IBAction func backSwipe(_ sender: Any) {
         
-//        let realm = try! Realm()
-//        let test = realm.objects(DBEvent.self) //.filter("age < 2")
-//        print(test)
+    }
+    
+    @IBAction func segmentControl(_ sender: UISegmentedControl) {
+        print("Change Segment " + String(segmentData.selectedSegmentIndex))
     }
 }
 

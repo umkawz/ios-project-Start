@@ -1,5 +1,5 @@
 //
-//  DBTree.swift
+//  DBUserData.swift
 //  TransferInformation
 //
 //  Created by intern on 07/07/2017.
@@ -9,8 +9,8 @@
 //import Foundation
 //import RealmSwift
 //
-//class DBTree: Object {
-////    dynamic var idCard = 0
-////    let event = List<DBEvent>()
+//class DBUserData: Object {
 //    
+//    dynamic var idCard = 0
+//    dynamic var UserDescription = ""
 //}

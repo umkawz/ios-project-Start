@@ -12,11 +12,15 @@
         <!--Navigation Controller-->
         <scene sceneID="l2N-XL-6Od">
             <objects>
-                <navigationController id="v4Z-4Z-Npk" sceneMemberID="viewController">
+                <navigationController toolbarHidden="NO" id="v4Z-4Z-Npk" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="m3L-5Z-fIR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="sxM-pQ-H6L">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ho0-zw-PSv"/>
                     </connections>
@@ -40,29 +44,43 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7QU-a7-sJt">
-                                <rect key="frame" x="179" y="250" width="157" height="30"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" id="WIl-OX-1Dw">
+                                <rect key="frame" x="39" y="261" width="297" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Да"/>
+                                <segments>
+                                    <segment title="Да"/>
+                                    <segment title="Нет"/>
+                                </segments>
                                 <connections>
-                                    <segue destination="1Oa-7w-0Eu" kind="modal" id="gBB-r3-hf5"/>
+                                    <action selector="segmentControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="Xqc-bS-F2i"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="V44-us-vm6">
-                                <rect key="frame" x="39" y="250" width="157" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Нет"/>
-                            </button>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="WdO-Kr-thR" appends="YES" id="4JP-v5-x0K"/>
+                            <outletCollection property="gestureRecognizers" destination="6jq-C4-cC1" appends="YES" id="gOb-kS-kBI"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Test IOS Application" id="LcX-Z8-qF1"/>
                     <connections>
                         <outlet property="dogFilter" destination="khc-2g-xQ8" id="7RH-yK-zaV"/>
+                        <outlet property="segmentData" destination="WIl-OX-1Dw" id="Bo2-6q-DmZ"/>
                         <outlet property="textQuestion" destination="khc-2g-xQ8" id="O7d-67-BSb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="WdO-Kr-thR">
+                    <connections>
+                        <action selector="swipeUpdate:" destination="BYZ-38-t0r" id="f7c-av-Emw"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="6jq-C4-cC1">
+                    <connections>
+                        <action selector="backSwipe:" destination="BYZ-38-t0r" id="E20-mZ-BPG"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="85.5" y="154.5"/>
         </scene>
